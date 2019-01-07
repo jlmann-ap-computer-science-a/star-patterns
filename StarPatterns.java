@@ -12,67 +12,67 @@
 
 class StarPatterns 
 {
-	public static void starGrid(int h, int w)
-	{			
-		for (int i=0; i<h; i++)
-		{
-			for (int j=0; j<w; j++)
-			{				
-				System.out.print(i + "" + j + " ");
-			}
-			System.out.println();
-		}	
-	}
-	
-	public static void starBox(int h, int w)
-	{
-		for (int i=0; i<h; i++)
-		{
-			for (int j=0; j<w; j++)
-			{	
-			    if (i==0 || i==h-1 || j==0 || j==w-1) System.out.print("*");
-			    else System.out.print(" ");
-				//System.out.print(i + "" + j + " ");
-			}
-			System.out.println();
-		}	
-	}
+    public static void starGrid(int h, int w)
+    {           
+        for (int row=0; row<h; row++)
+        {
+            for (int col=0; col<w; col++)
+            {               
+                System.out.print(row + "" + col + " ");
+            }
+            System.out.println();
+        }   
+    }
+    
+    public static void starBox(int h, int w)
+    {
+        for (int row=0; row<h; row++)
+        {
+            for (int col=0; col<w; col++)
+            {   
+                if (row==0 || row==h-1 || col==0 || col==w-1) System.out.print("*");
+                else System.out.print(" ");
+                //System.out.print(row + "" + col + " ");
+            }
+            System.out.println();
+        }   
+    }
 
-	public static void starX(int h)
-	{
-		int w = h;
+    public static void starX(int h)
+    {
+        int w = h;
 
-		for (int i=0; i<h; i++)
-		{
-			for (int j=0; j<w; j++)
-			{
-			    if (i==j || i+j==h-1) System.out.print("*");
-			    else System.out.print(" ");
-			    System.out.print(i + "" + j + " ");
-			}
-			System.out.println();
-		}	
-	}
-	
-	public static void starZ(int h)
-	{
-	
-	}
+        for (int row=0; row<h; row++)
+        {
+            for (int col=0; col<w; col++)
+            {
+                if (row==col || row+col==h-1) System.out.print("*");
+                else System.out.print(" ");
+                //System.out.print(row + "" + col + " ");
+            }
+            System.out.println();
+        }   
+    }
+    
+    public static void starZ(int h)
+    {
+    
+    }
 
-	public static void main(String[] args) 
-	{
-		starGrid(5, 5);
-		System.out.println();
+    public static void main(String[] args) 
+    {
+        starGrid(5, 5);
+        System.out.println();
 
-		starBox(7, 9);
-		System.out.println();
-		
-		starX(7);
-		System.out.println();
-		
-		starZ(7);
-		System.out.println();
-			
+        starBox(7, 9);
+        System.out.println();
+        
+        starX(7);
+        System.out.println();
+        
+        starZ(7);
+        System.out.println();
+            
 	}
      
 }
